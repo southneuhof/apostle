@@ -67,12 +67,12 @@ export class Apostle {
                 .read()
                 .then(({ done, value }) => {
                   if (done) {
-                    onUploadProgress({ loaded: total, total })
+                    onUploadProgress?.({ loaded: total, total })
                     controller.close()
                     return
                   }
                   loaded += value?.length || 0
-                  onUploadProgress({ loaded, total })
+                  onUploadProgress?.({ loaded, total })
                   controller.enqueue(value)
                   push()
                 })
