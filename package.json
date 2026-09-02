@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "pnpm run type-check",
-    "type-check": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit -p tsconfig.json",
+    "type-check": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit -p tsconfig.json --singleThreaded",
     "test": "vitest run"
   }
 }
